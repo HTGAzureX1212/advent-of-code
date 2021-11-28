@@ -49,25 +49,4 @@ impl<'a> Solution<'a> for Year2015Day1 {
     }
 }
 
-pub fn run() {
-    println!("Advent of Code 2015, Day 1");
-    println!();
-
-    print!("aocsol: stage 1: parsing input (year2015/input/day1)... ");
-    let input = Year2015Day1::parse(include_str!("input/day1"));
-    println!("done");
-
-    println!();
-
-    print!("aocsol: stage 2: computing answer for part 1... ");
-    let solution = Year2015Day1::part_1(input);
-    println!("done");
-    println!("answer for part 1: {:?}", solution);
-
-    println!();
-
-    print!("aocsol: stage 3: computing answer for part 2... ");
-    let solution = Year2015Day1::part_2(input);
-    println!("done");
-    println!("answer for part 2: {:?}", solution);
-}
+aocfw::run_fn!(st Year2015Day1; filename "input/day1"; year "2015"; day "1");
