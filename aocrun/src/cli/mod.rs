@@ -81,7 +81,7 @@ pub fn run(mut opts: RunOptions) -> anyhow::Result<ExitCode> {
 }
 
 fn current_runopts(opts: &RunOptions) -> String {
-    format!(r"current run options:
+    format!(r"Current run options:
 
 - Advent of Code Event Year: {}
 - Advent of Code Event Day : {}

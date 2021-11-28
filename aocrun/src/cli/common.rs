@@ -17,7 +17,8 @@ pub fn advanced_opts() -> anyhow::Result<AdvancedRunOption> {
     println!("2            : customize the run options");
     println!("anything else: abort run");
 
-    print!("$ ");
+    println!();
+    print!("aoc> ");
 
     let _ = io::stdout().flush();
     let input = readln()?;
