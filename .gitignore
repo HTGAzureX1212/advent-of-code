@@ -1,3 +1,5 @@
 .idea
+target
 
+aocrun.exe
 Cargo.lock

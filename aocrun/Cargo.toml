@@ -1,0 +1,9 @@
+[package]
+name = "aocrun"
+authors = [ "HTGAzureX1212." ]
+version = "0.0.0"
+description = "Advent of Code Runner"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.49"

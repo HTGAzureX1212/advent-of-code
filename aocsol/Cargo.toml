@@ -4,8 +4,9 @@ authors = [ "HTGAzureX1212." ]
 version = "0.0.0"
 description = "Advent of Code Solutions"
 edition = "2021"
-license = "MIT"
-license-file = "LICENSE"
 
 [dependencies.aocfw]
 path = "../aocfw"
+
+[features]
+year2015-day1 = []
