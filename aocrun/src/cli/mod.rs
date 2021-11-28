@@ -51,7 +51,7 @@ pub fn run(mut opts: RunOptions) -> anyhow::Result<ExitCode> {
         .arg("--package")
         .arg("aocsol")
         .arg("--features")
-        .arg(format!("aocsol/year{}-day{}", opts.year.unwrap(), opts.day.unwrap()))
+        .arg(&format!("aocsol/year{},aocsol/year{}-day{}", opts.year.unwrap(), opts.year.unwrap(), opts.day.unwrap()))
         .arg("--no-default-features")
         .arg("--release");
 

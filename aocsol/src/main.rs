@@ -1,3 +1,6 @@
+#[cfg_attr(feature = "year2015", path = "year2015/mod.rs")]
+pub mod year;
+
 pub fn main() {
-    println!("Hello world!");
+    year::run();
 }
