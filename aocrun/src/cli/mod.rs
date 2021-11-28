@@ -27,16 +27,14 @@ pub fn run(mut opts: RunOptions) -> anyhow::Result<ExitCode> {
 
         match common::advanced_opts()? {
             AdvancedRunOption::RunAsIs => {
-                opts.year = Some(2021);
-                opts.day = Some(1);
-                opts.bench = Some(false);
+                opts.year = opts.year.or(Some(2021));
+                opts.day = opts.day.or(Some(1));
+                opts.bench = opts.bench.or(Some(false));
 
                 break;
             }
             AdvancedRunOption::RunWithCustomOptions => {
                 opts = customize_runopts(opts)?;
-
-                break;
             }
             AdvancedRunOption::AbortRun => {
                 println!("aborting run");
