@@ -1,8 +1,11 @@
 [package]
-name = "aocfw"
+name = "aocsol"
 authors = [ "HTGAzureX1212." ]
 version = "0.0.0"
-description = "Advent of Code Framework"
+description = "Advent of Code Solutions"
 edition = "2021"
 license = "MIT"
 license-file = "LICENSE"
+
+[dependencies.aocfw]
+path = "../aocfw"
