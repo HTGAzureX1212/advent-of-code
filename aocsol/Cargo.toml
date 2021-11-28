@@ -8,9 +8,6 @@ edition = "2021"
 [dependencies.aocfw]
 path = "../aocfw"
 
-[dependencies.paste]
-version = "1.0.6"
-
 [features]
 year2015 = []
 year2015-day1 = []
