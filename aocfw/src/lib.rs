@@ -2,9 +2,9 @@
 
 use std::fmt::Debug;
 
-pub macro run_fn {
+pub macro solve_fn {
     (st $st:ident; filename $filename:literal; year $year:literal; day $day:literal) => {
-        pub fn run() {
+        pub fn solve() {
             println!("Advent of Code {}, Day {}", $year, $day);
             println!();
 

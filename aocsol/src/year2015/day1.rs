@@ -49,4 +49,4 @@ impl<'a> Solution<'a> for Year2015Day1 {
     }
 }
 
-aocfw::run_fn!(st Year2015Day1; filename "input/day1"; year "2015"; day "1");
+aocfw::solve_fn!(st Year2015Day1; filename "input/day1"; year "2015"; day "1");

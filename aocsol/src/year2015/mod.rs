@@ -2,5 +2,5 @@
 pub mod day;
 
 pub fn run() {
-    day::run();
+    day::solve();
 }
