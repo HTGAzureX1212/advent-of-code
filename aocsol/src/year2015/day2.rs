@@ -7,7 +7,7 @@ pub struct Year2015Day2;
 impl<'a> Solution<'a> for Year2015Day2 {
     type ParsedT = impl Iterator<Item = Dimensions> + Clone;
     type Part1OutputT = u64;
-    type Part2OutputT = ();
+    type Part2OutputT = u64;
 
     fn parse(input: &'a str) -> Self::ParsedT {
         input
@@ -34,6 +34,14 @@ impl<'a> Solution<'a> for Year2015Day2 {
     }
 
     fn part_2(data: Self::ParsedT) -> Self::Part2OutputT {
+        let mut total = 0;
+
+        data.for_each(|dim| {
+            total += 2 * cmp::min(cmp::min(dim.l + dim.w, dim.h + dim.w), dim.h + dim.l);
+            total += dim.l * dim.w * dim.h;
+        });
+
+        total
     }
 }
 
