@@ -1,8 +1,7 @@
-#![feature(decl_macro)]
-
 use std::fmt::Debug;
 
-pub macro solve_fn {
+#[macro_export]
+macro_rules! solve_fn {
     (st $st:ident; filename $filename:literal; year $year:literal; day $day:literal) => {
         pub fn solve() {
             println!("Advent of Code {}, Day {}", $year, $day);
