@@ -14,7 +14,7 @@ macro_rules! solve_fn {
             println!();
 
             print!("aocsol: stage 2: computing answer for part 1... ");
-            let solution = $st::part_1(input);
+            let solution = $st::part_1(input.clone());
             println!("done");
             println!("answer for part 1: {solution:?}");
 

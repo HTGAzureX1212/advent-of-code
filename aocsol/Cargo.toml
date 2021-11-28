@@ -11,3 +11,4 @@ path = "../aocfw"
 [features]
 year2015 = []
 year2015-day1 = []
+year2015-day2 = []

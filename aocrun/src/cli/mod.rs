@@ -27,7 +27,7 @@ pub fn run(mut opts: RunOptions) -> anyhow::Result<ExitCode> {
 
         match common::advanced_opts()? {
             AdvancedRunOption::RunAsIs => {
-                opts.year = Some(2015);
+                opts.year = Some(2021);
                 opts.day = Some(1);
                 opts.bench = Some(false);
 
@@ -35,6 +35,8 @@ pub fn run(mut opts: RunOptions) -> anyhow::Result<ExitCode> {
             }
             AdvancedRunOption::RunWithCustomOptions => {
                 opts = customize_runopts(opts)?;
+
+                break;
             }
             AdvancedRunOption::AbortRun => {
                 println!("aborting run");
@@ -45,6 +47,11 @@ pub fn run(mut opts: RunOptions) -> anyhow::Result<ExitCode> {
     }
 
     println!("stage 1: compile `aocsol` binary");
+    let mut command = process::Command::new("cargo");
+    command.arg("clean");
+
+    command.status().expect("could not remove previous artifacts");
+
     let mut command = process::Command::new("cargo");
     command
         .arg("build")
@@ -87,7 +94,7 @@ fn current_runopts(opts: &RunOptions) -> String {
 - Advent of Code Event Day : {}
 - Benchmark Solution       : {}
 ",
-            opts.year.unwrap_or(2015),
+            opts.year.unwrap_or(2021),
             opts.day.unwrap_or(1),
             opts.bench.unwrap_or(false)
     )
