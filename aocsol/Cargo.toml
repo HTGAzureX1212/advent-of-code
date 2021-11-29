@@ -8,9 +8,13 @@ edition = "2021"
 [dependencies.aocfw]
 path = "../aocfw"
 
+[dependencies.rust-crypto]
+version = "0.2.36"
+optional = true
+
 [features]
 year2015 = []
 year2015-day1 = []
 year2015-day2 = []
 year2015-day3 = []
-year2015-day4 = []
+year2015-day4 = [ "rust-crypto" ]
