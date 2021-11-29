@@ -61,4 +61,4 @@ impl From<Vec<u64>> for Dimensions {
     }
 }
 
-aocfw::solve_fn!(st Year2015Day2; filename "input/day2"; year 2015; day 2);
+aocfw::solve_fn!(fn solve; struct Year2015Day2; filename "input/day2"; year 2015; day 2);
