@@ -14,14 +14,14 @@ impl<'a> Solution<'a> for Year2021Day1 {
 
     fn part_1(data: Self::ParsedT) -> Self::Part1OutputT {
         data.clone()
-            .zip(data.skip(1))
+            .zip(data.cycle().skip(1))
             .filter(|(v1, v2)| v1 < v2)
             .count()
     }
 
     fn part_2(data: Self::ParsedT) -> Self::Part2OutputT {
         data.clone()
-            .zip(data.skip(3))
+            .zip(data.cycle().skip(3))
             .filter(|(v1, v2)| v1 < v2)
             .count()
     }
