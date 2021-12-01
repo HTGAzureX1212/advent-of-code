@@ -2,7 +2,7 @@ use aocfw::Solution;
 
 pub struct Year2021Day1;
 
-impl<'a> Solution<'a> for Year2015Day1 {
+impl<'a> Solution<'a> for Year2021Day1 {
     type ParsedT = ();
     type Part1OutputT = ();
     type Part2OutputT = ();
