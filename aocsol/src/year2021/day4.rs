@@ -67,7 +67,7 @@ impl<'a> Solution<'a> for Year2021Day4 {
 
             if data.boards.len() > 1 {
                 data.boards.retain(|board| !board_is_completed(board));
-                
+
                 continue;
             }
 

@@ -3,6 +3,7 @@
 #[cfg_attr(feature = "year2015-day3", path = "day3.rs")]
 #[cfg_attr(feature = "year2015-day4", path = "day4.rs")]
 #[cfg_attr(feature = "year2015-day5", path = "day5.rs")]
+#[cfg_attr(feature = "year2015-day6", path = "day6.rs")]
 pub mod day;
 
 pub fn run() {
